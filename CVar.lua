@@ -28,13 +28,3 @@ end
 frame:SetScript("OnEvent", eventHandler)
 
 BossBanner:SetScale(0.8)		--縮小BOSS掉落物
-
-
---過圖前滑鼠指向聲望條，過圖後會報錯修正，由NGA大佬oyg123提供解決辦法。
-_ReputationParagonFrame_SetupParagonTooltip = ReputationParagonFrame_SetupParagonTooltip;
-ReputationParagonFrame_SetupParagonTooltip=function(frame)
-   local currentValue, threshold = C_Reputation.GetFactionParagonInfo(frame.factionID);
-   if currentValue~=nil and threshold~=nil then
-        _ReputationParagonFrame_SetupParagonTooltip(frame)
-   end
-end
