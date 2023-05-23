@@ -63,6 +63,7 @@ local types = {
 	spell = SPELLS.."ID:",
 	item = ITEMS.."ID:",
 	currency = CURRENCY.."ID:",
+	Toy = TOY.."ID:",
 }
 
 local function AddLineForID(self, id, linkType, noadd)
@@ -110,4 +111,12 @@ end)
 TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Currency, function(self, data)
 	if self:IsForbidden() then return end
 	if data.id then AddLineForID(self, data.id, types.currency) end
+end)
+
+-- Toys
+TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Toy, function(self, data)
+	if self ~= GameTooltip or self:IsForbidden() then return end
+	if data and data.id then
+		AddLineForID(self, data.id, types.Toy)
+	end
 end)
