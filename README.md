@@ -5,13 +5,13 @@
 
 ## 查看AH圖紙是否學習
 AlreadyKnown.lua
+## 自動下馬
 AutoDismount.lua
 ## 報錯蒐集
 BaudErrorFrame.lua
 BaudErrorFrame.xml
-##BlizzardBags_ItemLevel.lua
+## 施法條顯示時間
 Casting.lua
-ChatLinkLevel.lua
 ## CVar設定
 CVar.lua
 ## 冷卻提醒
