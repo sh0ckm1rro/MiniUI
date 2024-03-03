@@ -3,7 +3,7 @@
 local function click(self)
 	if IsModifiedClick("DRESSUP") and self.link then
 		if self.type == "item" then
-			DressUpItemLink(self.link)									-- ctrl點擊圖示，試穿裝備
+			DressUpItemLink(self.link)						-- ctrl點擊圖示，試穿裝備
 		elseif self.type == "achievement" then
 			OpenAchievementFrameToAchievement(self.link)				-- ctrl點擊圖示，打開成就
 		end
@@ -35,10 +35,10 @@ function icon.SetIcon(type, id)
 		end
 	elseif type and (type == "spell" or type == "enchant") and id then
 		if GetSpellTexture(id) then
-			icon:SetNormalTexture(GetSpellTexture(id))					-- select(3, GetSpellInfo(id))
+			icon:SetNormalTexture(GetSpellTexture(id))				-- select(3, GetSpellInfo(id))
 			icon.overlay:Hide()
 			icon.type = "spell"
-			icon.link = nil												-- GetSpellLink(id)
+			icon.link = nil								-- GetSpellLink(id)
 		end
 	elseif type and type == "achievement" and id then
 		if GetAchievementInfo(id) and select(10, GetAchievementInfo(id)) then
